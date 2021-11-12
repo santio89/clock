@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(40, 40, 40);
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: teal;
+    width: 400px;
+    height: 400px;
+    position: absolute;  
+    border-radius: 100%;
+    border: 4px solid black;
+    outline: 2px solid white;
+    outline-offset: 20px;
+    box-shadow: 0 0 0 2px darkorange;
+    transition: 400ms;
+    cursor: pointer;
+
+    &:hover{
+        outline-offset: 4px;
+        transition: 400ms;
+    }
+
+    &:active{
+        .agujaA, .agujaB, .agujaC{
+            animation-play-state: paused;
+        }
+        .centro{
+            box-shadow: 0 0 10px 10px darkslategrey;
+        }
+    } 
+}
+
+.centro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: dimgray;
+    z-index: 1;
+    box-shadow: 0 0 10px 0px darkslategrey;
+}
+
+.agujaA{
+    background-color: white;
+    height: 190px;
+    width: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: reloj 60s infinite linear;
+    box-shadow: 0 0 10px 0 darkslategrey;
+    border-radius: 10px;
+}
+
+.agujaB{
+    background-color: white;
+    height: 150px;
+    width: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: reloj 3600s infinite linear;
+    box-shadow: 0 0 10px 0 darkslategrey;
+    border-radius: 10px;
+}
+
+.agujaC{
+    background-color: white;
+    height: 100px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: reloj 86400s infinite linear;
+    box-shadow: 0 0 10px 0 darkslategrey;
+    border-radius: 10px;
+}
+
+@keyframes reloj{
+    0%{transform: rotate(180deg); transform-origin: 25% 0;}
+    100%{transform: rotate(540deg); transform-origin: 25% 0;}
+}

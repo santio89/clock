@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #282828;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: teal;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  border-radius: 100%;
+  border: 4px solid black;
+  outline: 2px solid white;
+  outline-offset: 20px;
+  -webkit-box-shadow: 0 0 0 2px darkorange;
+          box-shadow: 0 0 0 2px darkorange;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.container:hover {
+  outline-offset: 4px;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.container:active .agujaA, .container:active .agujaB, .container:active .agujaC {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.container:active .centro {
+  -webkit-box-shadow: 0 0 10px 10px darkslategrey;
+          box-shadow: 0 0 10px 10px darkslategrey;
+}
+
+.centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: dimgray;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 10px 0px darkslategrey;
+          box-shadow: 0 0 10px 0px darkslategrey;
+}
+
+.agujaA {
+  background-color: white;
+  height: 190px;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: reloj 60s infinite linear;
+          animation: reloj 60s infinite linear;
+  -webkit-box-shadow: 0 0 10px 0 darkslategrey;
+          box-shadow: 0 0 10px 0 darkslategrey;
+  border-radius: 10px;
+}
+
+.agujaB {
+  background-color: white;
+  height: 150px;
+  width: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: reloj 3600s infinite linear;
+          animation: reloj 3600s infinite linear;
+  -webkit-box-shadow: 0 0 10px 0 darkslategrey;
+          box-shadow: 0 0 10px 0 darkslategrey;
+  border-radius: 10px;
+}
+
+.agujaC {
+  background-color: white;
+  height: 100px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: reloj 86400s infinite linear;
+          animation: reloj 86400s infinite linear;
+  -webkit-box-shadow: 0 0 10px 0 darkslategrey;
+          box-shadow: 0 0 10px 0 darkslategrey;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes reloj {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 25% 0;
+            transform-origin: 25% 0;
+  }
+  100% {
+    -webkit-transform: rotate(540deg);
+            transform: rotate(540deg);
+    -webkit-transform-origin: 25% 0;
+            transform-origin: 25% 0;
+  }
+}
+
+@keyframes reloj {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 25% 0;
+            transform-origin: 25% 0;
+  }
+  100% {
+    -webkit-transform: rotate(540deg);
+            transform: rotate(540deg);
+    -webkit-transform-origin: 25% 0;
+            transform-origin: 25% 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
